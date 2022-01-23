@@ -1,0 +1,27 @@
+
+
+
+POST  http://127.0.0.1:9999/users HTTP/1.1
+
+{
+    "name":     "Charlie",
+    "phone":    "+992900800612",
+    "login":    "CharliePuth",
+    "password": "safaasfa21sf"
+},
+
+
+###
+POST  http://127.0.0.1:9999/users/token HTTP/1.1
+
+{
+    "name":     "Adam",
+    "password": "safasf"
+},
+
+###
+POST  http://127.0.0.1:9999/users/token/id HTTP/1.1
+Authorization:<token>
+Content-Type: application/json
+
+
