@@ -31,7 +31,7 @@ func (s *Server) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
 }
 
 func (s *Server) Init() {
-	
+	s.mux.Use(middleware.Logger)
 	s.mux.HandleFunc("/api/v1/register/users", s.UserRegistration).Methods(POST)
 	s.mux.HandleFunc("/api/v1/login/users", s.Login).Methods(POST)
 	
